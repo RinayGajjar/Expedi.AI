@@ -10,7 +10,7 @@ import os
 import requests
 from typing import List, Dict
 
-# ============ GOOGLE PLACES API SETUP ============
+
 GOOGLE_API_KEY = "AIzaSyDUhEbbVwCyQwm79C3_ncsAvpysHd7J6sg"
 BASE_URL = "https://maps.googleapis.com/maps/api/place/textsearch/json"
 
@@ -26,7 +26,7 @@ def fetch_places(destination, interest):
         return places
     return []
 
-# ============ INITIALIZE OLLAMA & FAISS ============
+
 def initialize_llm():
     return Ollama(model="llama3.2", temperature=0.7)
 
@@ -50,7 +50,7 @@ def initialize_vectorstore(destination):
     vectorstore.save_local(vectorstore_path)
     return vectorstore
 
-# ============ GENERATE ITINERARY ============
+
 def generate_detailed_itinerary(destination: str, interests: List[str], num_days: int) -> List[Dict]:
     """Generate a detailed itinerary using dynamic data"""
     
@@ -110,7 +110,7 @@ def format_itinerary_markdown(destination: str, itinerary: List[Dict], start_dat
 
     return markdown
 
-# ============ STREAMLIT UI ============
+
 def set_background(image_url: str):
     st.markdown(
         f"""
