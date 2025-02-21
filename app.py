@@ -13,6 +13,10 @@ from typing import List, Dict
 import time
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1f9eec1f833405540f8cfebef5ff276586ba1a5b
 GOOGLE_API_KEY = "AIzaSyDUhEbbVwCyQwm79C3_ncsAvpysHd7J6sg"
 BASE_URL = "https://maps.googleapis.com/maps/api/place/textsearch/json"
 
@@ -113,8 +117,12 @@ def format_itinerary_markdown(destination: str, itinerary: List[Dict], start_dat
     return markdown
 
 
+<<<<<<< HEAD
 def set_premium_styles():
     """Apply premium styling to the application"""
+=======
+def set_background(image_url: str):
+>>>>>>> 1f9eec1f833405540f8cfebef5ff276586ba1a5b
     st.markdown(
         """
         <style>
